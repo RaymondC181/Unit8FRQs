@@ -44,11 +44,12 @@ public class GrayImage
         {
             for(int col = 0; col<pixelValues[0].length-2; col++)
             {
-                pixelValues[row][col] = pixelValues[row+2][col+2];
+                pixelValues[row][col] -= pixelValues[row+2][col+2];
                 if(pixelValues[row][col]<BLACK)
                 {
                     pixelValues[row][col] = BLACK;
                 }
+
             }
         }
     }
