@@ -24,7 +24,7 @@ public class GrayImage
         {
             for(int element : row)
             {
-                if(element==225)
+                if(element==WHITE)
                 {
                     count++;
                 }
@@ -45,9 +45,9 @@ public class GrayImage
             for(int col = 0; col<pixelValues[0].length-2; col++)
             {
                 pixelValues[row][col] = pixelValues[row+2][col+2];
-                if(pixelValues[row][col]<0)
+                if(pixelValues[row][col]<BLACK)
                 {
-                    pixelValues[row][col] = 0;
+                    pixelValues[row][col] = BLACK;
                 }
             }
         }
